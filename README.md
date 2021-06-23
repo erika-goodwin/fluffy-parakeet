@@ -112,11 +112,82 @@ CopiedArray: [30, 7, 12, 34, 8, 20, 1, 45, 32, 18]
 import java.util.ArrayList;
 import java.util.List;
 
-public class Lab3Q3 {
 
-    public static void main(String[] args){
-        
+class Cars {
+    String make;
+    String model;
+    int year;
+
+    //Contructor
+    public Cars(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
     }
 
+    //Getter
+    public String getMake() {
+        return make;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    //Setter
+    public void setMake(String make) {
+        this.make = make;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    //ToString()
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", Cars.class.getSimpleName() + "[", "]")
+                .add("make='" + make + "'")
+                .add("model='" + model + "'")
+                .add("year=" + year)
+                .toString();
+    }
 }
+
+
+public class Lab3Q3 {
+    public static void main(String[] args) {
+        List<Cars> cars = new ArrayList<>();
+        cars.add(new Cars("Honda", "Civic Type R", 1997));
+        cars.add(new Cars("BMW", "3 Series", 1983));
+        cars.add(new Cars("VW", "Polo", 1975));
+
+
+        System.out.println("Before Sorting: " + cars);
+
+        Collections.sort(cars, new Comparator<Cars>() {
+            @Override
+            public int compare(Cars o1, Cars o2) {
+                return Integer.compare(o1.getYear(), o2.getYear());
+            }
+        });
+
+        System.out.println("After Sorting: " + cars);
+
+    }
+}
+
+```
+Console:
+```
+Before Sorting: [Cars[make='Honda', model='Civic Type R', year=1997], Cars[make='BMW', model='3 Series', year=1983], Cars[make='VW', model='Polo', year=1975]]
+After Sorting: [Cars[make='VW', model='Polo', year=1975], Cars[make='BMW', model='3 Series', year=1983], Cars[make='Honda', model='Civic Type R', year=1997]]
 ```
