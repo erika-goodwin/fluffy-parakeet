@@ -15,9 +15,29 @@ import java.util.Scanner;
 
 public class Lab3Q1 {
 
-	public static void main(String[] args) {
-		
-	}
+        public static void main(String[] args) {
+            List<Integer> ArrayQ1 = new ArrayList<>();
+            ArrayQ1.add(30);
+            ArrayQ1.add(7);
+            ArrayQ1.add(12);
+            ArrayQ1.add(34);
+            ArrayQ1.add(8);
+            ArrayQ1.add(20);
+            ArrayQ1.add(1);
+            ArrayQ1.add(45);
+            ArrayQ1.add(32);
+            ArrayQ1.add(18);
+
+            System.out.println(ArrayQ1); //[30, 7, 12, 34, 8, 20, 1, 45, 32, 18]
+
+            boolean ans = ArrayQ1.contains(4);
+
+            if (ans){
+                System.out.println("the number is in the list");
+            } else {
+                System.out.println("the number is not in the list");
+            }
+        }
 
 }
 ```
