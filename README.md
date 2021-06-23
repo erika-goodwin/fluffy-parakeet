@@ -42,6 +42,12 @@ public class Lab3Q1 {
 }
 ```
 
+Console:
+```
+[30, 7, 12, 34, 8, 20, 1, 45, 32, 18]
+the number is not in the list
+```
+
 ## Q2:
 
 - Create an ArrayList of Integers
