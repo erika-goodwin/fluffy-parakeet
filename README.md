@@ -63,10 +63,40 @@ import java.util.Random
 public class Lab3Q2 {
 
 	public static void main(String[] args) {
-		
-	}
+        List<Integer> ArrayQ2 = new ArrayList<>();
+        ArrayQ2.add(30);
+        ArrayQ2.add(7);
+        ArrayQ2.add(12);
+        ArrayQ2.add(34);
+        ArrayQ2.add(8);
+        ArrayQ2.add(20);
+        ArrayQ2.add(1);
+        ArrayQ2.add(45);
+        ArrayQ2.add(32);
+        ArrayQ2.add(18);
+        System.out.println("Original ArrayQ2: " + ArrayQ2);
+
+        List<Integer> CopiedArray = new ArrayList<>();
+        for (int number: ArrayQ2
+             ) {
+            CopiedArray.add(number);
+        }
+
+        ArrayQ2.set(0,-5);
+
+        System.out.println("ArrayQ2: " + ArrayQ2);
+        System.out.println("CopiedArray: " + CopiedArray);
+
+
+    }
 
 }
+```
+Console:
+```
+Original ArrayQ2: [30, 7, 12, 34, 8, 20, 1, 45, 32, 18]
+ArrayQ2: [-5, 7, 12, 34, 8, 20, 1, 45, 32, 18]
+CopiedArray: [30, 7, 12, 34, 8, 20, 1, 45, 32, 18]
 ```
 
 ## Q3:
